@@ -11,7 +11,7 @@ const Sidebar = () => {
 
     return (
         <div
-            className={`sidebar min-h-screen flex flex-col justify-between bg-gray-100 transition-all duration-300 
+            className={`sidebar border-r-2 border-gray-800 min-h-screen flex flex-col justify-between bg-gray-100 transition-all duration-300 
         ${extend ? 'w-[200px]' : 'w-[70px]'}`}  // Smooth width animation
         >
             <SidebarTop extend={extend} toggleSidebar={toggleSidebar} />
