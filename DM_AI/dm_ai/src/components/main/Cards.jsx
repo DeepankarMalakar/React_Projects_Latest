@@ -2,7 +2,7 @@ const Cards = ({ onCardClick }) => {
     const suggestions = [
         "Explain AI in simple terms",
         "Generate a creative story",
-        "Summarize today's tech news",
+        "Give Some Marketing Ideas for my startup",
         "Give me coding interview tips",
     ];
 

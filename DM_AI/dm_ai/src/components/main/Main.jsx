@@ -16,6 +16,12 @@ const Main = () => {
 
     const handleGenerate = async (query) => {
         const finalPrompt = query || prompt;
+
+        // For pre-defined card clicks
+        if (query) {
+            setPrompt(query);
+        }
+
         if (!finalPrompt.trim()) return alert("Please enter a prompt!");
 
         try {
@@ -29,9 +35,16 @@ const Main = () => {
         }
     };
 
+    // Reset state on logo click
+    const resetState = () => {
+        setPrompt("");
+        setResponse("");
+    };
+
+
     return (
         <div className="flex flex-col w-full h-screen bg-gray-50 overflow-hidden">
-            <Navbar />
+            <Navbar onReset={resetState} />
 
             <div className="flex-1 flex items-center justify-center relative overflow-hidden">
                 <AnimatePresence mode="wait">
